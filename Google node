@@ -1,0 +1,32 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "nodeRedApp"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "talk to Node Red"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "nodeRedApp": {
+      "name": "nodeRedApp",
+      "url": "https://192.168.1.100:8081/",
+      "fulfillmentApiVersion": 2,
+      "in_dialog_intents": [
+        {
+          "name": "actions.intent.CANCEL"
+        }
+      ]
+    }
+  }
+}
+
